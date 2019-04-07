@@ -18,9 +18,9 @@ import com.route.validation.RouteValidator;
  * @author Arun G
  *
  */
-public class MainTrainRoute {
+public class Main {
 	
-	private static final Logger LOGGER = Logger.getLogger(MainTrainRoute.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
 	final static String FILE_NAME = "inputcityroutes.txt";
 
