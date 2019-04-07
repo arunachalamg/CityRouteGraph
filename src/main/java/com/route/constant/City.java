@@ -1,4 +1,4 @@
-package com.train.constant;
+package com.route.constant;
 
 /**
  * Define all cities which are linked with rail routes

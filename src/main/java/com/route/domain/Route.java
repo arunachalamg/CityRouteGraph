@@ -1,4 +1,4 @@
-package com.train.domain;
+package com.route.domain;
 
 public class Route {
 

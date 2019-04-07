@@ -1,13 +1,13 @@
-package com.train;
+package com.route;
 
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.train.exception.RouteException;
-import com.train.process.CityRouteProcessor;
-import com.train.util.CommonUtil;
-import com.train.validation.RouteValidator;
+import com.route.exception.RouteException;
+import com.route.process.CityRouteProcessor;
+import com.route.util.CommonUtil;
+import com.route.validation.RouteValidator;
 
 
 /**
@@ -34,7 +34,7 @@ public class MainTrainRoute {
 		Map<String,Long> routes = null;
 		try {
 			final String inputData = CommonUtil.readFile(FILE_NAME);
-			System.out.println("Input Data :"+inputData);
+			LOGGER.log(Level.INFO,"Input Data :"+inputData);
 			routes = RouteValidator.validateAndProcess(inputData);
 			new CityRouteProcessor(routes).processRoutes();
 		
@@ -43,6 +43,5 @@ public class MainTrainRoute {
 		}
 	
 	}
-	
-	
+		
 }

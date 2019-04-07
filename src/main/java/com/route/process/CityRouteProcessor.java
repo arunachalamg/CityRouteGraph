@@ -1,15 +1,15 @@
-package com.train.process;
+package com.route.process;
 
-import static com.train.constant.RouteConstants.DIFF_ROUTES_CC;
-import static com.train.constant.RouteConstants.DISTANCE_ROUTE_ABC;
-import static com.train.constant.RouteConstants.DISTANCE_ROUTE_AD;
-import static com.train.constant.RouteConstants.DISTANCE_ROUTE_ADC;
-import static com.train.constant.RouteConstants.DISTANCE_ROUTE_AEBCD;
-import static com.train.constant.RouteConstants.DISTANCE_ROUTE_AED;
-import static com.train.constant.RouteConstants.SHORTEST_ROUTE_AC;
-import static com.train.constant.RouteConstants.SHORTEST_ROUTE_BB;
-import static com.train.constant.RouteConstants.TRIPS_AC_4;
-import static com.train.constant.RouteConstants.TRIPS_CC_3;
+import static com.route.constant.RouteConstants.DIFF_ROUTES_CC;
+import static com.route.constant.RouteConstants.DISTANCE_ROUTE_ABC;
+import static com.route.constant.RouteConstants.DISTANCE_ROUTE_AD;
+import static com.route.constant.RouteConstants.DISTANCE_ROUTE_ADC;
+import static com.route.constant.RouteConstants.DISTANCE_ROUTE_AEBCD;
+import static com.route.constant.RouteConstants.DISTANCE_ROUTE_AED;
+import static com.route.constant.RouteConstants.SHORTEST_ROUTE_AC;
+import static com.route.constant.RouteConstants.SHORTEST_ROUTE_BB;
+import static com.route.constant.RouteConstants.TRIPS_AC_4;
+import static com.route.constant.RouteConstants.TRIPS_CC_3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.train.exception.RouteException;
+import com.route.exception.RouteException;
 
 /**
  * it process the route details with cities.
@@ -75,7 +75,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	private String getRoutesWithMnDistance(final String originCity, final String destCity,int dis) throws RouteException{
+	public String getRoutesWithMnDistance(final String originCity, final String destCity,int dis) throws RouteException{
 		long n = 0;
 		
 		final Map<String,Long> routeAndDistance = getAllPossibleRoundRouteAndDistance(originCity,destCity);
@@ -99,7 +99,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	private String getShortestRoute(final String originCity, final String destCity) throws RouteException{
+	public String getShortestRoute(final String originCity, final String destCity) throws RouteException{
 		long shortestDis = 0;
 		
 		final Map<String,Long> routeAndDistance = getRouteAndDistance(originCity,destCity);	
@@ -228,7 +228,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	private String getNoOfRutesWithExtractStop(String source, String dest,int stop) throws RouteException{
+	public String getNoOfRutesWithExtractStop(String source, String dest,int stop) throws RouteException{
 		int n = 0;
 	
 		final List<String> cityRoutes = this.findAllRutes(source, dest);
@@ -255,7 +255,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	private String getNoOfRutesWithMaxStop(final String source, final String dest, int stop) throws RouteException{
+	public String getNoOfRutesWithMaxStop(final String source, final String dest, int stop) throws RouteException{
 		int n = 0;
 		
 		final List<String> cityRoutes = this.findAllRutes(source, dest);
@@ -278,7 +278,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	private String getDistanceOfRoute(final String cities) throws RouteException{
+	public String getDistanceOfRoute(final String cities) throws RouteException{
 		long totalDistance = 0l;
 		
 		if(null!=routes && !routes.isEmpty()) {
@@ -328,7 +328,7 @@ public class CityRouteProcessor {
 	 * @return
 	 * @throws RouteException
 	 */
-	public List<String> findAllRutes(final String source,final String dest) throws RouteException{
+	private List<String> findAllRutes(final String source,final String dest) throws RouteException{
         
 		List<String> finalCityRoutes = null;
 		final List<String> fianlRoutes = this.findRutes(source, dest);
@@ -348,6 +348,9 @@ public class CityRouteProcessor {
 					finalCityRoutes.add(String.format("%s-%s", city,additionalRoute));
 				}
 			}
+		}
+		if(null!=finalCityRoutes) {
+			finalCityRoutes.remove(source);// remove unwanted value
 		}
 		return finalCityRoutes;
 	}

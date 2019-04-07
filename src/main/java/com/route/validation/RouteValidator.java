@@ -1,4 +1,4 @@
-package com.train.validation;
+package com.route.validation;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,10 +7,10 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.train.constant.City;
-import com.train.domain.Route;
-import com.train.exception.RouteException;
-import com.train.util.CommonUtil;
+import com.route.constant.City;
+import com.route.domain.Route;
+import com.route.exception.RouteException;
+import com.route.util.CommonUtil;
 
 /**
  * This Class validates the given cities and process the route object if given cities are valid, otherwise throw an error with message.

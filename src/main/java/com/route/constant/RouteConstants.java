@@ -1,4 +1,4 @@
-package com.train.constant;
+package com.route.constant;
 
 import java.util.ResourceBundle;
 

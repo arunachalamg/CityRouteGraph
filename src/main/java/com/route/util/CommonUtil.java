@@ -1,4 +1,4 @@
-package com.train.util;
+package com.route.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,8 +7,8 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.train.constant.City;
-import com.train.exception.RouteException;
+import com.route.constant.City;
+import com.route.exception.RouteException;
 
 /**
  * Holds all common Utilities for the application

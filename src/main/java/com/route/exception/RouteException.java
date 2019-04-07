@@ -1,4 +1,4 @@
-package com.train.exception;
+package com.route.exception;
 
 /**
  * Application specific exceptions.
