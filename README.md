@@ -16,7 +16,7 @@ Graph: AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 # Expected Output for the given Examples
 1. input : AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 2. Outputs:
-#**************************************************************************************************************************************
+#******************************************************************************************************************
 The distance of the route A-B-C = 9
 
 The distance of the route A-D = 5
@@ -36,6 +36,6 @@ The length of the shortest route from A to C = (9) via - {A-E-B-C=14, A-B-C=9, A
 The length of the shortest route from B to B = (9) via - {B-C-D-E-B=21, B-C-E-B=9}
 
 The number of different routes from C to C with a distance of less than 30 = (7) via - {C-D-C-E-B-C=25, C-D-E-B-C-D-E-B-C-D-E-B-C=63, C-E-B-C-E-B-C-E-B-C=27, C-D-E-B-C-E-B-C=30, C-E-B-C-D-E-B-C=30, C-E-B-C-D-C=25, C-D-C-D-C-D-C=48, C-D-C-D-C=32, C-E-B-C=9, C-D-E-B-C=21, C-D-E-B-C-D-E-B-C=42, C-E-B-C-E-B-C=18, C-D-C-D-E-B-C=37, C-D-E-B-C-D-C=37, C-D-C=16}
-#**************************************************************************************************************************************
+#*****************************************************************************************************************
 
 
