@@ -16,7 +16,8 @@ Graph: AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 # Expected Output for the given Examples
 1. input : AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 2. Outputs: ![Screenshot](graph.jpg)
-#******************************************************************************************************************
+#*****************************************************************************************************************
+
 The distance of the route A-B-C = 9
 
 The distance of the route A-D = 5
